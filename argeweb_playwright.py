@@ -1,7 +1,7 @@
 from playwright.sync_api import sync_playwright
 
 
-def insert_subdomain_dns(fqdn, cname=None, a=None, mx=None, aaaa=None, txt=None, srv=None, prio=None, ttl=600, username='', password=''):
+def insert_subdomain_dns(fqdn, cname=None, a=None, mx=None, aaaa=None, txt=None, srv=None, prio=None, ttl=600, username='name', password='password'):
     '''
     Install Chromium Web-browser (Most optimized):
     playwright install chromium
@@ -99,4 +99,4 @@ def insert_subdomain_dns(fqdn, cname=None, a=None, mx=None, aaaa=None, txt=None,
         browser.close()
 
 
-insert_subdomain_dns('full_domain', txt='full_address', prio=0, ttl=3600)
+insert_subdomain_dns('full_subdomain', cname='full_address', prio=0, ttl=3600)
